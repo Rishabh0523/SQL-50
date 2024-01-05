@@ -2,3 +2,5 @@ SELECT a.id AS Id
 FROM weather a , weather b 
 WHERE DATEDIFF(a.recordDate , b.recordDate) = 1 
 AND a.temperature > b.temperature ;
+
+// In this we have used function DATEDIFF that's why we  have got the answer .
