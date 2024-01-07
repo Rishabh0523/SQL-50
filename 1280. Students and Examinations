@@ -1,0 +1,7 @@
+SELECT st.student_id , st.student_name , s.subject_name ,COUNT(exam.subject_name)attended_exams
+FROM Students AS st
+JOIN Subjects AS s
+LEFT JOIN Examinations AS exam
+ON st.student_id = exam.student_id AND s.subject_name = exam.subject_name
+GROUP BY st.student_id , s.subject_name
+ORDER BY student_id , subject_name;
