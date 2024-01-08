@@ -1,0 +1,5 @@
+SELECT S.user_id , 
+round(avg(case when(C.action='confirmed') then 1 else 0 end),2) as confirmation_rate from Signups s 
+left join Confirmations C
+on S.user_id=C.user_id 
+GROUP BY S.user_id ORDER BY S.user_id;
