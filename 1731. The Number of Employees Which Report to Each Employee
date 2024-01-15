@@ -3,4 +3,4 @@ from employees employee inner join employees manager
 on employee.reports_to = manager.employee_id
 group by employee.reports_to
 having count(employee.reports_to) > 0
-order by manager.employee_id
+order by manager.employee_id;
