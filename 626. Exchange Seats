@@ -1,0 +1,4 @@
+select s1.id as id, ifnull(s2.student,s1.student) as student
+from Seat s1
+left join Seat s2
+on (s1.id = s2.id -1 and mod(s1.id,2) =1) or (s1.id = s2.id +1 and mod(s1.id,2) =0);
