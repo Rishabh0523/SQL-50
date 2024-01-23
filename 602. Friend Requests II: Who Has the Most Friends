@@ -3,6 +3,6 @@ from (
 select requester_id as id from requestaccepted
  union all
 select accepter_id from requestaccepted
-)s
+) s
 group by id
 order by count(id) desc limit 1 ;
