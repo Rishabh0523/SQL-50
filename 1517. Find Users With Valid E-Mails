@@ -1,0 +1,5 @@
+# Write your MySQL query statement below
+SELECT user_id,name, mail
+FROM Users
+WHERE LOWER(SUBSTRING_INDEX(mail, '@', 1)) REGEXP '^[a-z][a-z0-9_.-]*$'
+AND SUBSTRING_INDEX(mail, '@', -1) = 'leetcode.com';
